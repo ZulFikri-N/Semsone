@@ -148,7 +148,7 @@ if (isset($_POST['login'])) {
     </form>
     
     <div class="text-center mt-4">
-        <small class="text-muted">&copy; 2026 Semsone Official</small>
+        <small class="text-muted">&copy; Semsone </small>
     </div>
 </div>
 
