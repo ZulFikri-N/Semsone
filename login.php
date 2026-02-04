@@ -126,7 +126,7 @@ if (isset($_POST['login'])) {
 
     <div class="header-text text-center">
         <h2>Selamat Datang</h2>
-        <p>Silakan masuk agar bisa ter akses</p>
+        <p>Silahkan masukkan username dan password</p>
     </div>
 
     <?php if (isset($error)) : ?>
