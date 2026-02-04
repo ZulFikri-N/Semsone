@@ -13,6 +13,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Semsone</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="icon" type="image/png" href="assets/img/logo.png">
     <style>
         /* --- CSS Global --- */
         body {
@@ -177,6 +179,22 @@
             border-color: #1976d2;
             transform: scale(1.05);
         }
+        .instagram-link {
+        color: #1976d2; 
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 0.9rem;
+        transition: 0.3s;
+        }
+
+        .instagram-link:hover {
+        color: #1976d2; 
+        text-decoration: underline;
+        }
+
+        .team-card p {
+        margin-bottom: 5px; 
+        }
     </style>
 </head>
 <body>
@@ -233,7 +251,7 @@
                     <div class="card-body text-center">
                         <h5 class="card-title fw-bold text-dark mb-3"><?= $p['nama']; ?></h5>
                         <div class="mt-auto">
-                            <a href="detail.php?id=..." class="btn btn-outline-primary w-100 fw-bold shadow-sm">
+                            <a href="detail.php?nama=<?= urlencode($p['nama']); ?>" class="btn btn-outline-primary w-100 fw-bold shadow-sm">
                                 Lihat Detail
                             </a>
                         </div>
@@ -249,26 +267,42 @@
     <div class="container">
         <h2 class="text-center mb-5 fw-bold" style="color: #1976d2;">TIM KAMI</h2>
         <div class="row text-center justify-content-center g-4">
+            
             <div class="col-md-4 col-lg-3 team-card">
-                <img src="assets/img/foto4.png" alt="Team 1" onerror="this.src='https://via.placeholder.com/150?text=Team+Semsone'">
-                <h5 class="fw-bold">Dhenia Putri Nuraini</h5>
-                <p class="text-muted">Ketua</p>
+                <img src="assets/img/foto4.png" alt="Dhenia" onerror="this.src='https://via.placeholder.com/150?text=Team+Semsone'">
+                <h5 class="fw-bold mb-1">Dhenia Putri Nuraini</h5>
+                <p class="text-muted mb-1">Ketua</p>
+                <a href="https://www.instagram.com/_.dhenia?igsh=MTEzMnU5YWtzbnZhYw==" target="_blank" class="instagram-link">
+                    <i class="fab fa-instagram me-1"></i> @_.dhenia
+                </a>
             </div>
+
             <div class="col-md-4 col-lg-3 team-card">
-                <img src="assets/img/foto2.png" alt="Team 2" onerror="this.src='https://via.placeholder.com/150?text=Team+Semsone'">
-                <h5 class="fw-bold">Fahridzal Nur Sidiq</h5>
-                <p class="text-muted">Wakil Ketua</p>
+                <img src="assets/img/foto2.png" alt="Fahridzal" onerror="this.src='https://via.placeholder.com/150?text=Team+Semsone'">
+                <h5 class="fw-bold mb-1">Fahridzal Nur Sidiq</h5>
+                <p class="text-muted mb-1">Wakil Ketua</p>
+                <a href="https://www.instagram.com/fahrixyzs?igsh=ZmF6NXN3czcwMGhl" target="_blank" class="instagram-link">
+                    <i class="fab fa-instagram me-1"></i> @fahrixyzs
+                </a>
             </div>
+
             <div class="col-md-4 col-lg-3 team-card">
-                <img src="assets/img/foto3.png" alt="Team 3" onerror="this.src='https://via.placeholder.com/150?text=Team+Semsone'">
-                <h5 class="fw-bold">Ega Silfhia</h5>
-                <p class="text-muted">Sekretaris</p>
+                <img src="assets/img/foto3.png" alt="Ega" onerror="this.src='https://via.placeholder.com/150?text=Team+Semsone'">
+                <h5 class="fw-bold mb-1">Ega Silfhia</h5>
+                <p class="text-muted mb-1">Sekretaris</p>
+                <a href="https://www.instagram.com/esl_fhia?igsh=MWZmZTZ2amF2bzE5cw==" target="_blank" class="instagram-link">
+                    <i class="fab fa-instagram me-1"></i> @esl_fhia
+                </a>
             </div>
+
             <div class="col-md-4 col-lg-3 team-card">
-                <img src="assets/img/foto1.png" alt="Team 4" onerror="this.src='https://via.placeholder.com/150?text=Team+Semsone'">
-                <h5 class="fw-bold">Zul Fikri Nugroho</h5>
-                <p class="text-muted">Bendahara</p>
+                <img src="assets/img/foto1.png" alt="Zul Fikri" onerror="this.src='https://via.placeholder.com/150?text=Team+Semsone'">
+                <h5 class="fw-bold mb-1">Zul Fikri Nugroho</h5>
+                <p class="text-muted mb-1">Bendahara</p>
+                <a href="https://www.instagram.com/rvttomb?igsh=MTZiM3B1ODVmc2l3bw==" target="_blank" class="instagram-link">
+                    <i class="fab fa-instagram me-1"></i> @rvttomb
             </div>
+
         </div>
     </div>
 </section>
