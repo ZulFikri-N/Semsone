@@ -16,21 +16,66 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="icon" type="image/png" href="assets/img/logo.png">
     <style>
-        /* --- CSS Global --- */
         body {
             background-color: #f8fbff;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             overflow-x: hidden; /* Mencegah scroll horizontal akibat animasi haze */
         }
 
-        /* --- Navbar Styles (Logo Melayang & Diperbesar) --- */
+        .nav-menu-text {
+            position: relative;
+            text-decoration: none;
+            /* Ukuran diperbesar dan diberi jarak antar huruf agar elegan */
+            font-size: 1.25rem !important; 
+            letter-spacing: 1px;
+            /* Padding kiri & kanan ditambah agar menu lebih renggang */
+            padding: 10px 25px !important; 
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .nav-menu-text::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 4px; /* Sedikit lebih tebal agar seimbang dengan teks besar */
+            bottom: -2px;
+            left: 50%;
+            background-color: #1976d2;
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+
+        .nav-menu-text:hover::after,
+        .nav-menu-text:active::after {
+            width: 70%;
+        }
+
+        .nav-menu-text:hover,
+        .nav-menu-text:active {
+            color: #1976d2 !important;
+        }
+
+        @media (max-width: 576px) {
+        .nav-menu-text {
+            font-size: 1rem !important;
+            padding: 8px 12px !important;
+            letter-spacing: 0;
+        }
+        }
+        
+        .nav-link:focus {
+            outline: none;
+            box-shadow: none;
+        }
         .custom-navbar {
             background: linear-gradient(to bottom, #e3f2fd, #bbdefb) !important;
             border-bottom: 1px solid #90caf9;
             height: 80px; 
             display: flex;
             align-items: center;
-            z-index: 1050;
+            overflow: visible;
         }
 
         .navbar-brand {
@@ -62,6 +107,27 @@
             color: #1976d2 !important;
         }
 
+        @media (max-width: 768px) {
+        .nav-menu-text {
+            font-size: 0.85rem !important;
+            padding-left: 8px !important;
+            padding-right: 8px !important;
+        }
+
+        body {
+        overflow-x: hidden;
+        }
+
+        .navbar-brand img {
+            height: 80px !important;
+            top: -35px;
+        }
+
+        .btn-logout {
+            font-size: 0.75rem !important;
+            padding: 5px 12px !important;
+        }
+    }
         .btn-logout {
             background-color: #2196f3;
             border-radius: 8px;
@@ -193,30 +259,33 @@
         }
 
         .team-card p {
-        margin-bottom: 5px; 
+        margin-bottom: 5px; /* Memberi sedikit jarak antara jabatan dan link */
         }
     </style>
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-light custom-navbar sticky-top shadow-sm">
-    <div class="container">
-        <a class="navbar-brand" href="#">
-            <img src="assets/img/logo.png" alt="Semsone Logo">
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav mx-auto">
-                <li class="nav-item"><a class="nav-link px-3 fw-medium" href="#">Home</a></li>
-                <li class="nav-item"><a class="nav-link px-3 fw-medium" href="#">Member</a></li>
-                <li class="nav-item"><a class="nav-link px-3 fw-medium" href="#">Order</a></li>
-            </ul>
-            <div class="d-flex">
-                <a href="logout.php" class="btn btn-logout px-4 py-2 fw-bold text-white">LOGOUT</a>
-            </div>
+<nav class="navbar navbar-light custom-navbar sticky-top shadow-sm">
+    <div class="container d-flex align-items-center flex-nowrap">
+        
+        <div style="flex: 1; display: flex; justify-content: flex-start;">
+            <a class="navbar-brand" href="index.php">
+                <img src="assets/img/logo.png" alt="Semsone Logo">
+            </a>
         </div>
+
+        <div style="flex: 2; display: flex; justify-content: center;">
+            <ul class="nav flex-row list-unstyled mb-0">
+                <li><a class="nav-link fw-bold text-dark nav-menu-text" href="index.php">Home</a></li>
+                <li><a class="nav-link fw-bold text-dark nav-menu-text" href="#team">Member</a></li>
+                <li><a class="nav-link fw-bold text-dark nav-menu-text" href="#produk">Order</a></li>
+            </ul>
+        </div>
+
+        <div style="flex: 1; display: flex; justify-content: flex-end;">
+            <a href="logout.php" class="btn btn-logout px-3 py-1 py-md-2 fw-bold text-white shadow-sm">LOGOUT</a>
+        </div>
+
     </div>
 </nav>
 
