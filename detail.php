@@ -5,10 +5,8 @@ if (!isset($_SESSION['login'])) {
     exit;
 }
 
-// Tangkap nama dari URL
 $nama_produk = isset($_GET['nama']) ? $_GET['nama'] : 'Produk';
 
-// Simulasi data biaya seperti di gambar yang kamu kirim
 $data_biaya = [
     "Kopi Gula Aren" => ["harga" => "12.000", "modal" => "6.500", "pajak" => "2.400", "ops" => "1.200", "untung" => "1.900", "img" => "assets/img/kopi.jpg"],
     "Markisa Sprite" => ["harga" => "12.000", "modal" => "5.500", "pajak" => "2.400", "ops" => "1.200", "untung" => "2.900", "img" => "assets/img/markisa.jpg"],
@@ -20,7 +18,6 @@ $data_biaya = [
     
 ];
 
-// Ambil data spesifik atau gunakan default jika tidak ada di array
 $detail = isset($data_biaya[$nama_produk]) ? $data_biaya[$nama_produk] : ["harga" => "0", "modal" => "0", "pajak" => "0", "ops" => "0", "untung" => "0", "img" => "https://via.placeholder.com/300"];
 ?>
 
@@ -35,7 +32,6 @@ $detail = isset($data_biaya[$nama_produk]) ? $data_biaya[$nama_produk] : ["harga
     <style>
         body { background-color: #f0f8ff; font-family: 'Segoe UI', sans-serif; margin: 0; padding: 0; }
         
-        /* Navbar Sesuai Landing Page */
         .custom-navbar {
             background: linear-gradient(to bottom, #e3f2fd, #bbdefb) !important;
             border-bottom: 1px solid #90caf9;
@@ -51,7 +47,6 @@ $detail = isset($data_biaya[$nama_produk]) ? $data_biaya[$nama_produk] : ["harga
             padding: 8px 20px; border-radius: 8px; font-weight: bold;
         }
 
-        /* Layout Kartu Tengah */
         .main-content {
             display: flex; justify-content: center; align-items: center;
             min-height: calc(100vh - 80px); padding: 20px;

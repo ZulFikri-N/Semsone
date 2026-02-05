@@ -1,12 +1,11 @@
 <?php
 $host = "localhost";
-$user = "root"; // Username default XAMPP
-$pass = "";     // Password default XAMPP (kosong)
-$db   = "semsone_db"; // GANTI dengan nama database yang kamu buat di phpMyAdmin
+$user = "root"; 
+$pass = "";     
+$db   = "semsone_db"; 
 
 $conn = mysqli_connect($host, $user, $pass, $db);
 
-// Cek koneksi
 if (!$conn) {
     die("Koneksi gagal: " . mysqli_connect_error());
 }

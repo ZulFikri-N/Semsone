@@ -19,16 +19,14 @@
         body {
             background-color: #f8fbff;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            overflow-x: hidden; /* Mencegah scroll horizontal akibat animasi haze */
+            overflow-x: hidden; 
         }
 
         .nav-menu-text {
             position: relative;
             text-decoration: none;
-            /* Ukuran diperbesar dan diberi jarak antar huruf agar elegan */
             font-size: 1.25rem !important; 
             letter-spacing: 1px;
-            /* Padding kiri & kanan ditambah agar menu lebih renggang */
             padding: 10px 25px !important; 
             transition: all 0.3s ease;
             display: inline-block;
@@ -38,7 +36,7 @@
             content: '';
             position: absolute;
             width: 0;
-            height: 4px; /* Sedikit lebih tebal agar seimbang dengan teks besar */
+            height: 4px; 
             bottom: -2px;
             left: 50%;
             background-color: #1976d2;
@@ -141,7 +139,6 @@
             transform: translateY(-2px);
         }
 
-        /* --- Hero Section --- */
         .hero-section {
             background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('assets/img/bg.png');
             background-size: cover;
@@ -151,7 +148,6 @@
             color: white;
         }
 
-        /* --- Product Card Styles --- */
         .card-product {
             border: none;
             border-radius: 15px;
@@ -194,12 +190,11 @@
             justify-content: center;
         }
 
-        /* --- Animasi Haze (Kabut Bergerak) --- */
         .haze-container {
             position: relative;
             width: 100%;
             height: 350px;
-            background: #1976d2; /* Warna dasar biru Semsone */
+            background: #1976d2; 
             overflow: hidden;
             display: flex;
             align-items: center;
@@ -225,7 +220,6 @@
             to { transform: translateX(-50%); }
         }
 
-        /* --- Section Tim Kami --- */
         .team-section {
             padding: 80px 0;
             background-color: #fff;
@@ -259,7 +253,7 @@
         }
 
         .team-card p {
-        margin-bottom: 5px; /* Memberi sedikit jarak antara jabatan dan link */
+        margin-bottom: 5px; 
         }
     </style>
 </head>
@@ -277,8 +271,8 @@
         <div style="flex: 2; display: flex; justify-content: center;">
             <ul class="nav flex-row list-unstyled mb-0">
                 <li><a class="nav-link fw-bold text-dark nav-menu-text" href="index.php">Home</a></li>
-                <li><a class="nav-link fw-bold text-dark nav-menu-text" href="#team">Member</a></li>
-                <li><a class="nav-link fw-bold text-dark nav-menu-text" href="#produk">Order</a></li>
+                <li><a class="nav-link fw-bold text-dark nav-menu-text" href="member.php">Member</a></li>
+                <li><a class="nav-link fw-bold text-dark nav-menu-text" href="order.php">Order</a></li>
             </ul>
         </div>
 
