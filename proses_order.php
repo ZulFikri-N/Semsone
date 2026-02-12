@@ -18,8 +18,8 @@ if (isset($_POST['simpan'])) {
 
     // 2. Definisi Harga Jual & Harga Modal (Silahkan sesuaikan nominalnya)
     // Contoh Harga Jual
-    $h_cireng = 10000; $h_ori = 15000; $h_mentai = 18000; 
-    $h_w_kuah = 15000; $h_w_grg = 15000; $h_kopi = 12000; $h_markisa = 10000;
+    $h_cireng = 3000; $h_ori = 15000; $h_mentai = 18000; 
+    $h_w_kuah = 15000; $h_w_grg = 15000; $h_kopi = 12000; $h_markisa = 12000;
 
     // Contoh Harga Modal (HPP)
     $m_cireng = 6000; $m_ori = 8000; $m_mentai = 10000; 
